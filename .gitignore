@@ -454,3 +454,4 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 #for security reason we have added appsettings.json here N.
 appsettings.json
+ssl
