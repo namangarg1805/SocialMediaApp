@@ -10,6 +10,7 @@ namespace API.Interfaces
     public interface IUserRepository
     {
         void Update(AppUser AppUser);
+        Task DeleteUser(string username);
         Task<bool>SaveAllChangesAsync();
         Task<IEnumerable<AppUser>>GetUsersAsync();
         Task<AppUser> GetUsersByIdAsync(int id);

@@ -2,7 +2,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { setTheme } from 'ngx-bootstrap/utils';
 import { User } from './models/user';
-import { AccountService } from './_services/account.service';
+import { AccountService } from './services/account.service';
 
 @Component({
   selector: 'app-root',

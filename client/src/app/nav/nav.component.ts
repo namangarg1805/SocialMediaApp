@@ -3,7 +3,7 @@ import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router'
 import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
-import { AccountService } from '../_services/account.service';
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-nav',
@@ -23,15 +23,12 @@ username:any
     this.accountService.login(this.model).subscribe({
       next:response=>{
         console.log(response);
-        this.router.navigateByUrl("/members")
+        this.router.navigateByUrl("/members");
         this.toast.success("logged in successfully");
-      },
-      error:(error)=>{
-        console.log(error);
-        this.toast.error(error.error);
-    }
-  })
+      }
+    })
   }
+
   logout()
   {
     this.accountService.logout();

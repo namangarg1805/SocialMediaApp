@@ -1,9 +1,8 @@
-import { Photo } from "./photo"
 
-export interface member {
+
+export interface Member {
   id: number
   username: string
-  photoUrl: string
   age: number
   knownAs: string
   created: Date
@@ -14,6 +13,5 @@ export interface member {
   introduction: string
   lookingFor: string
   interests: string
-  photos: Photo[]
 }
 
